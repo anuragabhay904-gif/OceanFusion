@@ -1,0 +1,29 @@
+services:
+
+  backend:
+    build:
+      context: ./backend
+
+    container_name: oceanfusion-backend
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      DATABASE_URL: sqlite:///./oceanfusion.db
+      CORS_ORIGINS: http://localhost:5173
+
+    volumes:
+      - ./data:/app/data
+
+  frontend:
+    build:
+      context: ./frontend
+
+    container_name: oceanfusion-frontend
+
+    ports:
+      - "5173:80"
+
+    depends_on:
+      - backend

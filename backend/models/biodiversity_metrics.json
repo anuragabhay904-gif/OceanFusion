@@ -1,0 +1,22 @@
+{
+  "rows": 6856,
+  "train_rows": 5276,
+  "test_rows": 1580,
+  "features": [
+    "latitude",
+    "longitude",
+    "depth_m",
+    "temperature_c",
+    "salinity_psu",
+    "oxygen_umol_kg"
+  ],
+  "target": "shannon_diversity",
+  "model": "ExtraTreesRegressor",
+  "validation": "GroupShuffleSplit using rounded 1-degree latitude/longitude cells",
+  "mae": 0.12381840701505861,
+  "rmse": 0.16340092329961675,
+  "r2": 0.4323605327498483,
+  "training_source": "Tara Oceans PANGAEA biodiversity + depth-specific environmental context",
+  "biodiversity_source_doi": "10.1594/PANGAEA.853809",
+  "environment_source_doi": "10.1594/PANGAEA.853810"
+}

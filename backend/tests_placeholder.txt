@@ -1,0 +1,1 @@
+Tests can be run with pytest after adding pytest to requirements. Core endpoints are documented in the README.
